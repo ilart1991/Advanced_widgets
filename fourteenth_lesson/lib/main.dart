@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 
-import 'home_page.dart';
+import 'data/apptheme.dart';
+import 'presentation/pages/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const CustomTheme(
+      initialThemeKey: ThemesEnum.light,
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      theme: CustomTheme.of(context),
+      home: const MyHomePage(
+        title: 'weather demo',
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
