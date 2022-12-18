@@ -111,7 +111,7 @@ class _WeatherIconState extends State<WeatherIcon>
               WaterAnimated(
                 innerContext: innerContext,
               ),
-              const LargeText(),
+              LargeText(),
               GestureDetector(
                   onTap: () {
                     _changeSize();
