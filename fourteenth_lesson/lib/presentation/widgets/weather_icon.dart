@@ -4,8 +4,6 @@ import 'package:fourteenth_lesson/presentation/widgets/animated/sun_animated.dar
 import 'package:fourteenth_lesson/presentation/widgets/animated/water_animated.dart';
 import 'package:fourteenth_lesson/presentation/widgets/large_text.dart';
 
-import '../pages/home_page.dart';
-
 bool upper = false;
 late AnimationController controller;
 
@@ -18,6 +16,12 @@ class WeatherIcon extends StatefulWidget {
 
 class _WeatherIconState extends State<WeatherIcon>
     with TickerProviderStateMixin {
+  double sunAlpha = 1;
+  double cloudAlpha = 0;
+  double waterAlpha = 0;
+  double textAlpha = 0;
+  double weatherIndicator = 0;
+
   @override
   void initState() {
     controller = AnimationController(
@@ -104,14 +108,19 @@ class _WeatherIconState extends State<WeatherIcon>
             children: [
               SunAnimated(
                 innerContext: innerContext,
+                sunAlpha: sunAlpha,
               ),
               CloudsAnimated(
                 innerContext: innerContext,
+                cloudsAlpha: cloudAlpha,
               ),
               WaterAnimated(
                 innerContext: innerContext,
+                waterAlpha: waterAlpha,
               ),
-              LargeText(),
+              LargeText(
+                textAlpha: textAlpha,
+              ),
               GestureDetector(
                   onTap: () {
                     _changeSize();

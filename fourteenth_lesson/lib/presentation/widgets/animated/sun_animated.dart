@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../data/painters/sun_painter.dart';
-import '../../pages/home_page.dart';
 import '../inherited_colors.dart';
 import '../weather_icon.dart';
 
 class SunAnimated extends StatelessWidget {
   final BuildContext innerContext;
-  const SunAnimated({super.key, required this.innerContext});
+  final double sunAlpha;
+  const SunAnimated(
+      {super.key, required this.innerContext, required this.sunAlpha});
 
+  // double sunAlpha = MyHomePage(title: "weather demo", key: Key("key")).sunAlpha;
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(

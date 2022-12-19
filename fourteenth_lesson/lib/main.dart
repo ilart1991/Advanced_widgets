@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'data/apptheme.dart';
-import 'presentation/pages/home_page.dart';
+import 'presentation/pages/my_home_page.dart';
 
 void main() {
   runApp(
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: CustomTheme.of(context),
-      home: const MyHomePage(
+      home: MyHomePage(
         title: 'weather demo',
       ),
     );

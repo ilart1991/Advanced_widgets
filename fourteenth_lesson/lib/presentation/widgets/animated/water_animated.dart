@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../../../data/painters/water_painter.dart';
-import '../../pages/home_page.dart';
 import '../inherited_colors.dart';
 import '../weather_icon.dart';
 
 class WaterAnimated extends StatelessWidget {
   final BuildContext innerContext;
+  final double waterAlpha;
+  const WaterAnimated(
+      {super.key, required this.innerContext, required this.waterAlpha});
 
-  const WaterAnimated({super.key, required this.innerContext});
+  // double waterAlpha =
+  //     MyHomePage(title: "weather demo", key: Key("key")).waterAlpha;
+
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(

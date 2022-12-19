@@ -4,13 +4,6 @@ import 'package:fourteenth_lesson/presentation/widgets/weather_icon.dart';
 
 import '../../data/apptheme.dart';
 
-double sunAlpha = 1;
-double cloudAlpha = 0;
-double waterAlpha = 0;
-double textAlpha = 0;
-
-double weatherIndicator = 0;
-
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
   final String title;
@@ -34,7 +27,7 @@ class MyHomePage extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColor,
           title: Text(title),
         ),
-        body: const InheritedColors(
+        body: InheritedColors(
           sunColor: Colors.yellow,
           cloudsColor: Colors.black,
           waterColor: Colors.blue,

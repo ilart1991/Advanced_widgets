@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../data/text_shadow.dart';
-import '../pages/home_page.dart';
 
-class LargeText extends StatefulWidget {
-  const LargeText({super.key});
+class LargeText extends StatelessWidget {
+  const LargeText({super.key, required this.textAlpha});
+  final double textAlpha;
 
-  @override
-  State<LargeText> createState() => _LargeTextState();
-}
-
-class _LargeTextState extends State<LargeText> {
+  // double textAlpha =
   @override
   Widget build(BuildContext context) {
     return Positioned(
