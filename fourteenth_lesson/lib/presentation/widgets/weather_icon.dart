@@ -4,7 +4,6 @@ import 'package:fourteenth_lesson/presentation/widgets/animated/sun_animated.dar
 import 'package:fourteenth_lesson/presentation/widgets/animated/water_animated.dart';
 import 'package:fourteenth_lesson/presentation/widgets/large_text.dart';
 
-bool upper = false;
 late AnimationController controller;
 
 class WeatherIcon extends StatefulWidget {
@@ -21,6 +20,7 @@ class _WeatherIconState extends State<WeatherIcon>
   double waterAlpha = 0;
   double textAlpha = 0;
   double weatherIndicator = 0;
+  bool upper = false;
 
   @override
   void initState() {
